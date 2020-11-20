@@ -46,17 +46,18 @@
     display: flex;
     background-color: $bg;
     background-image: url("../images/icons/heart.svg");
-    width: 90px;
+    width: 60px;
     height: 50px;
     border-radius: 50% 0 0 50%;
     background-repeat: no-repeat;
     background-position: center center;
+    border-right: 1px solid #fff;
   }
   &-cart {
     display: flex;
     background-color: $bg;
     background-image: url("../images/icons/cart.svg");
-    width: 90px;
+    width: 60px;
     height: 50px;
     border-radius: 0 50% 50% 0;
     border-right: 1px solid #fff;
@@ -160,6 +161,13 @@
   border-top: 1px solid $grey;
   display: flex;
   justify-content: space-between;
+  &-copy{
+    color: #7b7b7b;
+    @extend %rubik-regular;
+    font-size: 14px;
+    line-height: 32px;
+
+  }
   &-menu__item{
     padding: 0 15px;
     color: $grey;

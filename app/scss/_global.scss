@@ -1,7 +1,18 @@
+html,
+body{
+  height: 100%;
+}
+
+.main{
+  flex-grow: 1;
+}
+
 body{
   font-size: 16px;
   color: $default-blue;
   line-height: 26px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container{

@@ -1,11 +1,12 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 .header {
-  padding: 50px 80px;
   &__wrapper {
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,7 +91,7 @@
 }
 
 .footer {
-  &__logo-img{
+  &__logo-img {
     margin-bottom: 20px;
   }
 }
@@ -114,7 +115,7 @@
     width: 200px;
   }
 
-  &-text{
+  &-text {
     margin-bottom: 30px;
     @extend %rubik-regular;
     font-size: 14px;
@@ -122,14 +123,14 @@
     color: $grey;
   }
 
-  &-link{
+  &-link {
     color: $grey;
     @extend %rubik-regular;
     font-size: 14px;
     line-height: 32px;
   }
 
-  &-title{
+  &-title {
     @extend %dmsans-bold;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -137,43 +138,162 @@
     line-height: 21px;
   }
 
-  &-form__input{
+  &-form__input {
     max-width: 170px;
     width: 100%;
     border: none;
     background-color: #fef7f0;
     padding: 9px 10px 9px 15px;
     color: $default-blue;
-    &::placeholder{
+    &::placeholder {
       color: $default-blue;
       font-size: 16px;
     }
   }
 
-  &-form__btn{
+  &-form__btn {
     padding: 9px 10px 9px 15px;
     border: none;
-    background-color: #a3bbc8;
+    background-color: $btn-color;
   }
 }
 
-.footer__bottom{
+.footer__bottom {
   border-top: 1px solid $grey;
   display: flex;
   justify-content: space-between;
-  &-copy{
+  &-copy {
     color: #7b7b7b;
     @extend %rubik-regular;
     font-size: 14px;
     line-height: 32px;
-
   }
-  &-menu__item{
+  &-menu__item {
     padding: 0 15px;
     color: $grey;
   }
-  &-menu__item + .footer__bottom-menu__item{
+  &-menu__item + .footer__bottom-menu__item {
     border-left: 1px solid $grey;
+  }
+}
+
+.header__slider {
+  margin-top: 50px;
+  &-items {
+    background-image: url("../images/slider/bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding: 215px 290px;
+  }
+  &-title {
+    @extend %rubik-medium;
+    font-size: 72px;
+    line-height: 70px;
+    color: $default-blue;
+    margin-bottom: 30px;
+  }
+  &-text {
+    @extend %rubik-regular;
+    font-size: 18px;
+    line-height: 30px;
+    color: #436372;
+    margin-bottom: 35px;
+  }
+  &-item {
+    max-width: 470px;
+  }
+  &-link {
+    max-width: 200px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: $btn-color;
+    color: #fff;
+  }
+  .slick-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    li {
+      line-height: 9px;
+      padding: 0 5px;
+      button {
+        padding: 0;
+        font-size: 10px;
+        background-color: #fde3cc;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: none;
+      }
+      &.slick-active {
+        button {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.header__info {
+  margin-bottom: 70px;
+  &-items {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+  &-item {
+    padding: 45px 0;
+    position: relative;
+    &__title {
+      @extend %dmsans-bold;
+      font-size: 18px;
+      line-height: 40px;
+      color: #414141;
+    }
+    &__text {
+      @extend %dmsans-regular;
+      font-size: 16px;
+      line-height: 30px;
+      color: #585858;
+    }
+    &__support {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/info-support.svg");
+        width: 49px;
+        height: 49px;
+        top: 55px;
+        left: -65px;
+      }
+    }
+    &__delivery {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/info-delivery.svg");
+        width: 49px;
+        height: 29px;
+        top: 65px;
+        left: -65px;
+      }
+    }
+    &__payment {
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../images/info-payment.svg");
+        width: 49px;
+        height: 43px;
+        top: 55px;
+        left: -65px;
+      }
+    }
   }
 }
 

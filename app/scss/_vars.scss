@@ -29,3 +29,9 @@ $btn-color: #a3bbc8;
   font-family: "DMSans-Bold", sans-serif;
   font-weight: 700;
 }
+
+%title{
+  font-size: 36px;
+  color: $default-black;
+  @extend %dmsans-bold;
+}

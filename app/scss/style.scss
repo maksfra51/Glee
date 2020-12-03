@@ -312,7 +312,7 @@
     @extend %title;
     text-align: center;
   }
-  &-items{
+  &-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px 30px;
@@ -374,20 +374,226 @@
       fill: rgb(255, 255, 255);
     }
   }
-  &__img-box:hover &__link-box{
+  &__img-box:hover &__link-box {
     transform: translateY(0);
   }
-  &__title{
+  &__title {
     @extend %dmsans-medium;
     font-size: 16px;
     line-height: 40px;
     color: $default-blue;
   }
-  &__price{
+  &__price {
     @extend %dmsans-bold;
     font-size: 16px;
     line-height: 40px;
     color: $btn-color;
+  }
+}
+
+.add__product {
+  padding-bottom: 95px;
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.add__product-inner__item + .add__product-inner__item {
+  margin-left: 30px;
+}
+
+.add__product-inner__item {
+  background-color: #feefe2;
+  max-width: 870px;
+  width: 100%;
+  height: 390px;
+  display: flex;
+  &-box {
+    margin: auto 100px auto auto;
+    max-width: 350px;
+    position: relative;
+  }
+  &-box1::before,
+  &-box2::before {
+    content: "";
+    position: absolute;
+  }
+  &-box1::before {
+    width: 233px;
+    height: 405px;
+    background-image: url("../images/product/new_block1.png");
+    top: -200px;
+    left: -245px;
+  }
+  &-box2::before {
+    width: 222px;
+    height: 399px;
+    background-image: url("../images/product/new_block2.png");
+    top: -200px;
+    left: -245px;
+  }
+  &-title {
+    @extend %dmsans-bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: $default-blue;
+  }
+  &-text {
+    @extend %rubik-regular;
+    font-size: 16px;
+    line-height: 30px;
+    color: $default-blue;
+    margin-bottom: 32px;
+  }
+  &-link {
+    border-radius: 5px;
+    padding: 20px 20px;
+    border: 1px solid #436372;
+    color: #436372;
+  }
+}
+
+.design {
+  padding-bottom: 115px;
+  &__title {
+    @extend %title;
+    text-align: center;
+  }
+}
+
+.design__menu-list {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 33px 0 75px;
+
+  &__item + .design__menu-list__item {
+    padding-left: 30px;
+  }
+  &__item {
+    @extend %dmsans-bold;
+    font-size: 16px;
+    transition: all 0.3s;
+    color: #8b8b8b;
+  }
+  &__item:hover {
+    color: $default-black;
+  }
+}
+
+.design__items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.design__item {
+  max-width: 370px;
+  width: 100%;
+  height: 245px;
+  &-text {
+    max-width: 211px;
+    padding: 40px 0 0 40px;
+  }
+  &-title {
+    @extend %dmsans-bold;
+    font-size: 20px;
+    color: $default-black;
+  }
+  &-subtitle {
+    @extend %dmsans-bold;
+    font-size: 16px;
+    color: $btn-color;
+  }
+}
+
+.video {
+  background-image: url("../images/video-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 114px;
+}
+
+.blog {
+  padding: 0 0 80px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    &-link {
+      display: flex;
+      @extend %title;
+      font-size: 16px;
+      img {
+        margin-left: 15px;
+      }
+    }
+  }
+  &__title {
+    @extend %title;
+  }
+}
+
+.blog__items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog__item {
+  max-width: 370px;
+  background-color: #fff;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  &-box{
+    padding: 35px 30px 25px;
+    position: absolute;
+    max-width: 370px;
+    background-color: #fff;
+    &__info{
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 30px;
+      color: #222933;
+      display: flex;
+    }
+  }
+  &-text{
+    position: relative;
+    @extend %dmsans-medium;
+    font-size: 18px;
+    color: #262626;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &-text::before{
+    content: 'NEWS';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100px;
+    height: 30px;
+    background-color: $btn-color;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+  }
+  &-date{
+    margin-right: 30px;
+  }
+}
+
+.partners{
+  background-color: #fef7f0;
+  padding:260px 0 87px;  
+  &__list{
+    display: flex;
+    justify-content: space-around;
   }
 }
 
